@@ -40,10 +40,18 @@ export class MatrixCell extends Component<Props, State> {
   }
   render(): ReactNode {
       if (this.props.value === 0) {
-          return (
-              <div style={{ border: '1px double black', background: 'white', padding: '6px' }}>
-                  {this.state.value}
-              </div>);
+          if (this.state.value === -1) {
+              return (
+                  <div style={{ border: '0px', background: '', padding: '11px' }}>
+                      {'  '}
+                  </div>);
+          } else {
+              return (
+                  <div style={{ border: '1px double black', background: 'white', padding: '6px' }}>
+                      {this.state.value}
+                  </div>);
+          }
+
       } else {
           return (
               <div style={{ border: '1px double black', background: 'white', padding: '6px' }} onClick={this.handler}>
