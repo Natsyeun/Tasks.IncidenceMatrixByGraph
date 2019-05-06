@@ -3,7 +3,7 @@ import * as React from 'react';
 import { MatrixCell } from './MatrixCell';
 
 interface Props {
-  edge: [number, number][];
+  // edge: [number, number][];
   keys: number;
   length: number;
   get: (elem: number, index: number) => void;
@@ -16,7 +16,7 @@ export class MatrixRow extends Component<Props> {
   }
 
   render(): ReactNode {
-    console.log('VEC: ', this.props.edge);
+    // console.log('VEC: ', this.props.edge);
     let flag = -1;
     return new Array(this.props.length).fill(0).map((e, i) => {
       if (flag === 0) {
